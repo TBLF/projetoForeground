@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
         notificationManager.notify(100, getNotification());
     }
     public Notification getNotification(){
+        createNotificationChannel();
         NotificationCompat.Builder builder = new NotificationCompat.Builder(this, CHANNEL_ID)
                 .setSmallIcon(R.drawable.icone)
                 .setContentTitle("Notificação")
